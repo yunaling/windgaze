@@ -1,1 +1,72 @@
-hello world
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sketches by Windgaze</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+    <script type="text/javascript" src="masonry.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+              // init Masonry
+var $grid = $('.grid').masonry({
+   itemSelector: '.grid-item',
+        // use element for option
+        columnWidth: '.grid-sizer',
+        gutter: 0
+  // options...
+});
+// layout Masonry after each image loads
+$grid.imagesLoaded().progress( function() {
+  $grid.masonry('layout');
+});
+      })
+
+
+
+    </script>
+
+</head>
+<body>
+
+    <div class="logo">
+      <img src="images/Windgaze_small.png">
+    </div>
+
+<div class="grid">
+  <!-- width of .grid-sizer used for columnWidth -->
+  <div class="grid-sizer">
+    <div class="grid-item">
+    <img src="images/waterloo-street.jpg" />
+  </div>
+  <div class="grid-item">
+    <img src="images/cloud-forest.jpg" />
+  </div>
+    <div class="grid-item">
+    <img src="images/chinese-garden.jpg" />
+  </div>
+  <div class="grid-item">
+    <img src="images/jewel.jpg" />
+  </div>
+  
+  <div class="grid-item">
+    <img src="images/Emerald-hill.jpg" />
+  </div>
+  
+  
+</div>
+
+
+
+
+</body>
+</html>
